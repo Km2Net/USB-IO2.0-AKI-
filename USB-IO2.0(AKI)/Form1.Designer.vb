@@ -20,57 +20,58 @@ Partial Class Form1
     'メモ: 以下のプロシージャは Windows フォーム デザイナで必要です。
     'Windows フォーム デザイナを使用して変更できます。  
     'コード エディタを使って変更しないでください。
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Me.btnSendRecv = New System.Windows.Forms.Button
-        Me.btnConnect = New System.Windows.Forms.Button
-        Me.pnlRunning = New System.Windows.Forms.Panel
-        Me.btnIoJ17 = New System.Windows.Forms.Button
-        Me.lblIoJ1 = New System.Windows.Forms.Label
-        Me.lblIoJ2 = New System.Windows.Forms.Label
-        Me.Label14 = New System.Windows.Forms.Label
-        Me.Label13 = New System.Windows.Forms.Label
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.btnIoJ23 = New System.Windows.Forms.Button
-        Me.btnIoJ22 = New System.Windows.Forms.Button
-        Me.btnIoJ21 = New System.Windows.Forms.Button
-        Me.btnIoJ20 = New System.Windows.Forms.Button
-        Me.btnIoJ16 = New System.Windows.Forms.Button
-        Me.btnIoJ15 = New System.Windows.Forms.Button
-        Me.btnIoJ14 = New System.Windows.Forms.Button
-        Me.btnIoJ13 = New System.Windows.Forms.Button
-        Me.btnIoJ12 = New System.Windows.Forms.Button
-        Me.btnIoJ11 = New System.Windows.Forms.Button
-        Me.btnIoJ10 = New System.Windows.Forms.Button
-        Me.pnlStting = New System.Windows.Forms.Panel
-        Me.lblPullUp = New System.Windows.Forms.Label
-        Me.chkPullUpStop = New System.Windows.Forms.CheckBox
-        Me.btnSetting = New System.Windows.Forms.Button
-        Me.lblStInJ1 = New System.Windows.Forms.Label
-        Me.lblStInJ2 = New System.Windows.Forms.Label
-        Me.Label19 = New System.Windows.Forms.Label
-        Me.Label20 = New System.Windows.Forms.Label
-        Me.Label21 = New System.Windows.Forms.Label
-        Me.Label22 = New System.Windows.Forms.Label
-        Me.btnStInJ23 = New System.Windows.Forms.Button
-        Me.btnStInJ22 = New System.Windows.Forms.Button
-        Me.btnStInJ21 = New System.Windows.Forms.Button
-        Me.btnStInJ20 = New System.Windows.Forms.Button
-        Me.btnStInJ17 = New System.Windows.Forms.Button
-        Me.btnStInJ16 = New System.Windows.Forms.Button
-        Me.btnStInJ15 = New System.Windows.Forms.Button
-        Me.btnStInJ14 = New System.Windows.Forms.Button
-        Me.btnStInJ13 = New System.Windows.Forms.Button
-        Me.btnStInJ12 = New System.Windows.Forms.Button
-        Me.btnStInJ11 = New System.Windows.Forms.Button
-        Me.btnStInJ10 = New System.Windows.Forms.Button
-        Me.btnStop = New System.Windows.Forms.Button
-        Me.tmrSendRecv = New System.Windows.Forms.Timer(Me.components)
-        Me.btnKm2Net = New System.Windows.Forms.Button
+        Me.components = New System.ComponentModel.Container()
+        Me.btnSendRecv = New System.Windows.Forms.Button()
+        Me.BtnConnect = New System.Windows.Forms.Button()
+        Me.pnlRunning = New System.Windows.Forms.Panel()
+        Me.BtnIoJ17 = New System.Windows.Forms.Button()
+        Me.LblIoJ1 = New System.Windows.Forms.Label()
+        Me.LblIoJ2 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.BtnIoJ23 = New System.Windows.Forms.Button()
+        Me.BtnIoJ22 = New System.Windows.Forms.Button()
+        Me.BtnIoJ21 = New System.Windows.Forms.Button()
+        Me.BtnIoJ20 = New System.Windows.Forms.Button()
+        Me.BtnIoJ16 = New System.Windows.Forms.Button()
+        Me.BtnIoJ15 = New System.Windows.Forms.Button()
+        Me.BtnIoJ14 = New System.Windows.Forms.Button()
+        Me.BtnIoJ13 = New System.Windows.Forms.Button()
+        Me.BtnIoJ12 = New System.Windows.Forms.Button()
+        Me.BtnIoJ11 = New System.Windows.Forms.Button()
+        Me.BtnIoJ10 = New System.Windows.Forms.Button()
+        Me.PnlStting = New System.Windows.Forms.Panel()
+        Me.LblPullUp = New System.Windows.Forms.Label()
+        Me.ChkPullUpStop = New System.Windows.Forms.CheckBox()
+        Me.BtnSetting = New System.Windows.Forms.Button()
+        Me.LblStInJ1 = New System.Windows.Forms.Label()
+        Me.LblStInJ2 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.BtnStInJ23 = New System.Windows.Forms.Button()
+        Me.BtnStInJ22 = New System.Windows.Forms.Button()
+        Me.BtnStInJ21 = New System.Windows.Forms.Button()
+        Me.BtnStInJ20 = New System.Windows.Forms.Button()
+        Me.BtnStInJ17 = New System.Windows.Forms.Button()
+        Me.BtnStInJ16 = New System.Windows.Forms.Button()
+        Me.BtnStInJ15 = New System.Windows.Forms.Button()
+        Me.BtnStInJ14 = New System.Windows.Forms.Button()
+        Me.BtnStInJ13 = New System.Windows.Forms.Button()
+        Me.BtnStInJ12 = New System.Windows.Forms.Button()
+        Me.BtnStInJ11 = New System.Windows.Forms.Button()
+        Me.BtnStInJ10 = New System.Windows.Forms.Button()
+        Me.BtnStop = New System.Windows.Forms.Button()
+        Me.TmrSendRecv = New System.Windows.Forms.Timer(Me.components)
+        Me.BtnKm2Net = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.pnlRunning.SuspendLayout()
-        Me.pnlStting.SuspendLayout()
+        Me.PnlStting.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnSendRecv
@@ -82,73 +83,73 @@ Partial Class Form1
         Me.btnSendRecv.Text = "送受信"
         Me.btnSendRecv.UseVisualStyleBackColor = True
         '
-        'btnConnect
+        'BtnConnect
         '
-        Me.btnConnect.Location = New System.Drawing.Point(12, 3)
-        Me.btnConnect.Name = "btnConnect"
-        Me.btnConnect.Size = New System.Drawing.Size(59, 27)
-        Me.btnConnect.TabIndex = 34
-        Me.btnConnect.Text = "接続"
-        Me.btnConnect.UseVisualStyleBackColor = True
+        Me.BtnConnect.Location = New System.Drawing.Point(12, 3)
+        Me.BtnConnect.Name = "BtnConnect"
+        Me.BtnConnect.Size = New System.Drawing.Size(59, 27)
+        Me.BtnConnect.TabIndex = 34
+        Me.BtnConnect.Text = "接続"
+        Me.BtnConnect.UseVisualStyleBackColor = True
         '
         'pnlRunning
         '
         Me.pnlRunning.BackColor = System.Drawing.SystemColors.HotTrack
         Me.pnlRunning.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pnlRunning.Controls.Add(Me.btnIoJ17)
-        Me.pnlRunning.Controls.Add(Me.lblIoJ1)
-        Me.pnlRunning.Controls.Add(Me.lblIoJ2)
+        Me.pnlRunning.Controls.Add(Me.BtnIoJ17)
+        Me.pnlRunning.Controls.Add(Me.LblIoJ1)
+        Me.pnlRunning.Controls.Add(Me.LblIoJ2)
         Me.pnlRunning.Controls.Add(Me.Label14)
         Me.pnlRunning.Controls.Add(Me.Label13)
         Me.pnlRunning.Controls.Add(Me.Label10)
         Me.pnlRunning.Controls.Add(Me.Label9)
-        Me.pnlRunning.Controls.Add(Me.btnIoJ23)
-        Me.pnlRunning.Controls.Add(Me.btnIoJ22)
-        Me.pnlRunning.Controls.Add(Me.btnIoJ21)
-        Me.pnlRunning.Controls.Add(Me.btnIoJ20)
-        Me.pnlRunning.Controls.Add(Me.btnIoJ16)
-        Me.pnlRunning.Controls.Add(Me.btnIoJ15)
-        Me.pnlRunning.Controls.Add(Me.btnIoJ14)
-        Me.pnlRunning.Controls.Add(Me.btnIoJ13)
-        Me.pnlRunning.Controls.Add(Me.btnIoJ12)
-        Me.pnlRunning.Controls.Add(Me.btnIoJ11)
-        Me.pnlRunning.Controls.Add(Me.btnIoJ10)
+        Me.pnlRunning.Controls.Add(Me.BtnIoJ23)
+        Me.pnlRunning.Controls.Add(Me.BtnIoJ22)
+        Me.pnlRunning.Controls.Add(Me.BtnIoJ21)
+        Me.pnlRunning.Controls.Add(Me.BtnIoJ20)
+        Me.pnlRunning.Controls.Add(Me.BtnIoJ16)
+        Me.pnlRunning.Controls.Add(Me.BtnIoJ15)
+        Me.pnlRunning.Controls.Add(Me.BtnIoJ14)
+        Me.pnlRunning.Controls.Add(Me.BtnIoJ13)
+        Me.pnlRunning.Controls.Add(Me.BtnIoJ12)
+        Me.pnlRunning.Controls.Add(Me.BtnIoJ11)
+        Me.pnlRunning.Controls.Add(Me.BtnIoJ10)
         Me.pnlRunning.ForeColor = System.Drawing.Color.Yellow
         Me.pnlRunning.Location = New System.Drawing.Point(12, 209)
         Me.pnlRunning.Name = "pnlRunning"
         Me.pnlRunning.Size = New System.Drawing.Size(290, 123)
         Me.pnlRunning.TabIndex = 36
         '
-        'btnIoJ17
+        'BtnIoJ17
         '
-        Me.btnIoJ17.BackColor = System.Drawing.Color.Red
-        Me.btnIoJ17.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnIoJ17.Location = New System.Drawing.Point(254, 63)
-        Me.btnIoJ17.Name = "btnIoJ17"
-        Me.btnIoJ17.Size = New System.Drawing.Size(30, 30)
-        Me.btnIoJ17.TabIndex = 19
-        Me.btnIoJ17.Text = "7"
-        Me.btnIoJ17.UseVisualStyleBackColor = False
+        Me.BtnIoJ17.BackColor = System.Drawing.Color.Red
+        Me.BtnIoJ17.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnIoJ17.Location = New System.Drawing.Point(254, 63)
+        Me.BtnIoJ17.Name = "BtnIoJ17"
+        Me.BtnIoJ17.Size = New System.Drawing.Size(30, 30)
+        Me.BtnIoJ17.TabIndex = 19
+        Me.BtnIoJ17.Text = "7"
+        Me.BtnIoJ17.UseVisualStyleBackColor = False
         '
-        'lblIoJ1
+        'LblIoJ1
         '
-        Me.lblIoJ1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblIoJ1.Font = New System.Drawing.Font("ＭＳ 明朝", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblIoJ1.Location = New System.Drawing.Point(46, 96)
-        Me.lblIoJ1.Name = "lblIoJ1"
-        Me.lblIoJ1.Size = New System.Drawing.Size(130, 21)
-        Me.lblIoJ1.TabIndex = 18
-        Me.lblIoJ1.Text = "I:&&hFF O:&&hFF"
+        Me.LblIoJ1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.LblIoJ1.Font = New System.Drawing.Font("ＭＳ 明朝", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.LblIoJ1.Location = New System.Drawing.Point(46, 96)
+        Me.LblIoJ1.Name = "LblIoJ1"
+        Me.LblIoJ1.Size = New System.Drawing.Size(130, 21)
+        Me.LblIoJ1.TabIndex = 18
+        Me.LblIoJ1.Text = "I:&&hFF O:&&hFF"
         '
-        'lblIoJ2
+        'LblIoJ2
         '
-        Me.lblIoJ2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblIoJ2.Font = New System.Drawing.Font("ＭＳ 明朝", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblIoJ2.Location = New System.Drawing.Point(153, 2)
-        Me.lblIoJ2.Name = "lblIoJ2"
-        Me.lblIoJ2.Size = New System.Drawing.Size(130, 21)
-        Me.lblIoJ2.TabIndex = 17
-        Me.lblIoJ2.Text = "I:&&h0F O:&&h0F"
+        Me.LblIoJ2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.LblIoJ2.Font = New System.Drawing.Font("ＭＳ 明朝", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.LblIoJ2.Location = New System.Drawing.Point(153, 2)
+        Me.LblIoJ2.Name = "LblIoJ2"
+        Me.LblIoJ2.Size = New System.Drawing.Size(130, 21)
+        Me.LblIoJ2.TabIndex = 17
+        Me.LblIoJ2.Text = "I:&&h0F O:&&h0F"
         '
         'Label14
         '
@@ -156,7 +157,7 @@ Partial Class Form1
         Me.Label14.Font = New System.Drawing.Font("ＭＳ Ｐ明朝", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label14.Location = New System.Drawing.Point(24, 97)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(24, 16)
+        Me.Label14.Size = New System.Drawing.Size(23, 16)
         Me.Label14.TabIndex = 16
         Me.Label14.Text = "J1"
         '
@@ -166,7 +167,7 @@ Partial Class Form1
         Me.Label13.Font = New System.Drawing.Font("ＭＳ Ｐ明朝", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label13.Location = New System.Drawing.Point(127, 3)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(24, 16)
+        Me.Label13.Size = New System.Drawing.Size(23, 16)
         Me.Label13.TabIndex = 15
         Me.Label13.Text = "J2"
         '
@@ -176,7 +177,7 @@ Partial Class Form1
         Me.Label10.Font = New System.Drawing.Font("ＭＳ Ｐ明朝", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label10.Location = New System.Drawing.Point(6, 31)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(93, 16)
+        Me.Label10.Size = New System.Drawing.Size(92, 16)
         Me.Label10.TabIndex = 14
         Me.Label10.Text = "入出力状態"
         '
@@ -186,210 +187,210 @@ Partial Class Form1
         Me.Label9.Font = New System.Drawing.Font("ＭＳ Ｐ明朝", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label9.Location = New System.Drawing.Point(6, 5)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(98, 16)
+        Me.Label9.Size = New System.Drawing.Size(97, 16)
         Me.Label9.TabIndex = 13
         Me.Label9.Text = "USB-IO 2.0"
         '
-        'btnIoJ23
+        'BtnIoJ23
         '
-        Me.btnIoJ23.BackColor = System.Drawing.Color.ForestGreen
-        Me.btnIoJ23.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnIoJ23.Location = New System.Drawing.Point(146, 25)
-        Me.btnIoJ23.Name = "btnIoJ23"
-        Me.btnIoJ23.Size = New System.Drawing.Size(30, 30)
-        Me.btnIoJ23.TabIndex = 12
-        Me.btnIoJ23.Text = "3"
-        Me.btnIoJ23.UseVisualStyleBackColor = False
+        Me.BtnIoJ23.BackColor = System.Drawing.Color.ForestGreen
+        Me.BtnIoJ23.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnIoJ23.Location = New System.Drawing.Point(146, 25)
+        Me.BtnIoJ23.Name = "BtnIoJ23"
+        Me.BtnIoJ23.Size = New System.Drawing.Size(30, 30)
+        Me.BtnIoJ23.TabIndex = 12
+        Me.BtnIoJ23.Text = "3"
+        Me.BtnIoJ23.UseVisualStyleBackColor = False
         '
-        'btnIoJ22
+        'BtnIoJ22
         '
-        Me.btnIoJ22.BackColor = System.Drawing.Color.ForestGreen
-        Me.btnIoJ22.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnIoJ22.Location = New System.Drawing.Point(182, 25)
-        Me.btnIoJ22.Name = "btnIoJ22"
-        Me.btnIoJ22.Size = New System.Drawing.Size(30, 30)
-        Me.btnIoJ22.TabIndex = 11
-        Me.btnIoJ22.Text = "2"
-        Me.btnIoJ22.UseVisualStyleBackColor = False
+        Me.BtnIoJ22.BackColor = System.Drawing.Color.ForestGreen
+        Me.BtnIoJ22.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnIoJ22.Location = New System.Drawing.Point(182, 25)
+        Me.BtnIoJ22.Name = "BtnIoJ22"
+        Me.BtnIoJ22.Size = New System.Drawing.Size(30, 30)
+        Me.BtnIoJ22.TabIndex = 11
+        Me.BtnIoJ22.Text = "2"
+        Me.BtnIoJ22.UseVisualStyleBackColor = False
         '
-        'btnIoJ21
+        'BtnIoJ21
         '
-        Me.btnIoJ21.BackColor = System.Drawing.Color.ForestGreen
-        Me.btnIoJ21.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnIoJ21.Location = New System.Drawing.Point(218, 25)
-        Me.btnIoJ21.Name = "btnIoJ21"
-        Me.btnIoJ21.Size = New System.Drawing.Size(30, 30)
-        Me.btnIoJ21.TabIndex = 10
-        Me.btnIoJ21.Text = "1"
-        Me.btnIoJ21.UseVisualStyleBackColor = False
+        Me.BtnIoJ21.BackColor = System.Drawing.Color.ForestGreen
+        Me.BtnIoJ21.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnIoJ21.Location = New System.Drawing.Point(218, 25)
+        Me.BtnIoJ21.Name = "BtnIoJ21"
+        Me.BtnIoJ21.Size = New System.Drawing.Size(30, 30)
+        Me.BtnIoJ21.TabIndex = 10
+        Me.BtnIoJ21.Text = "1"
+        Me.BtnIoJ21.UseVisualStyleBackColor = False
         '
-        'btnIoJ20
+        'BtnIoJ20
         '
-        Me.btnIoJ20.BackColor = System.Drawing.Color.ForestGreen
-        Me.btnIoJ20.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnIoJ20.Location = New System.Drawing.Point(254, 25)
-        Me.btnIoJ20.Name = "btnIoJ20"
-        Me.btnIoJ20.Size = New System.Drawing.Size(30, 30)
-        Me.btnIoJ20.TabIndex = 9
-        Me.btnIoJ20.Text = "0"
-        Me.btnIoJ20.UseVisualStyleBackColor = False
+        Me.BtnIoJ20.BackColor = System.Drawing.Color.ForestGreen
+        Me.BtnIoJ20.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnIoJ20.Location = New System.Drawing.Point(254, 25)
+        Me.BtnIoJ20.Name = "BtnIoJ20"
+        Me.BtnIoJ20.Size = New System.Drawing.Size(30, 30)
+        Me.BtnIoJ20.TabIndex = 9
+        Me.BtnIoJ20.Text = "0"
+        Me.BtnIoJ20.UseVisualStyleBackColor = False
         '
-        'btnIoJ16
+        'BtnIoJ16
         '
-        Me.btnIoJ16.BackColor = System.Drawing.Color.Red
-        Me.btnIoJ16.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnIoJ16.Location = New System.Drawing.Point(218, 63)
-        Me.btnIoJ16.Name = "btnIoJ16"
-        Me.btnIoJ16.Size = New System.Drawing.Size(30, 30)
-        Me.btnIoJ16.TabIndex = 7
-        Me.btnIoJ16.Text = "6"
-        Me.btnIoJ16.UseVisualStyleBackColor = False
+        Me.BtnIoJ16.BackColor = System.Drawing.Color.Red
+        Me.BtnIoJ16.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnIoJ16.Location = New System.Drawing.Point(218, 63)
+        Me.BtnIoJ16.Name = "BtnIoJ16"
+        Me.BtnIoJ16.Size = New System.Drawing.Size(30, 30)
+        Me.BtnIoJ16.TabIndex = 7
+        Me.BtnIoJ16.Text = "6"
+        Me.BtnIoJ16.UseVisualStyleBackColor = False
         '
-        'btnIoJ15
+        'BtnIoJ15
         '
-        Me.btnIoJ15.BackColor = System.Drawing.Color.Red
-        Me.btnIoJ15.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnIoJ15.Location = New System.Drawing.Point(182, 63)
-        Me.btnIoJ15.Name = "btnIoJ15"
-        Me.btnIoJ15.Size = New System.Drawing.Size(30, 30)
-        Me.btnIoJ15.TabIndex = 6
-        Me.btnIoJ15.Text = "5"
-        Me.btnIoJ15.UseVisualStyleBackColor = False
+        Me.BtnIoJ15.BackColor = System.Drawing.Color.Red
+        Me.BtnIoJ15.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnIoJ15.Location = New System.Drawing.Point(182, 63)
+        Me.BtnIoJ15.Name = "BtnIoJ15"
+        Me.BtnIoJ15.Size = New System.Drawing.Size(30, 30)
+        Me.BtnIoJ15.TabIndex = 6
+        Me.BtnIoJ15.Text = "5"
+        Me.BtnIoJ15.UseVisualStyleBackColor = False
         '
-        'btnIoJ14
+        'BtnIoJ14
         '
-        Me.btnIoJ14.BackColor = System.Drawing.Color.Red
-        Me.btnIoJ14.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnIoJ14.Location = New System.Drawing.Point(146, 63)
-        Me.btnIoJ14.Name = "btnIoJ14"
-        Me.btnIoJ14.Size = New System.Drawing.Size(30, 30)
-        Me.btnIoJ14.TabIndex = 5
-        Me.btnIoJ14.Text = "4"
-        Me.btnIoJ14.UseVisualStyleBackColor = False
+        Me.BtnIoJ14.BackColor = System.Drawing.Color.Red
+        Me.BtnIoJ14.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnIoJ14.Location = New System.Drawing.Point(146, 63)
+        Me.BtnIoJ14.Name = "BtnIoJ14"
+        Me.BtnIoJ14.Size = New System.Drawing.Size(30, 30)
+        Me.BtnIoJ14.TabIndex = 5
+        Me.BtnIoJ14.Text = "4"
+        Me.BtnIoJ14.UseVisualStyleBackColor = False
         '
-        'btnIoJ13
+        'BtnIoJ13
         '
-        Me.btnIoJ13.BackColor = System.Drawing.Color.Red
-        Me.btnIoJ13.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnIoJ13.Location = New System.Drawing.Point(110, 63)
-        Me.btnIoJ13.Name = "btnIoJ13"
-        Me.btnIoJ13.Size = New System.Drawing.Size(30, 30)
-        Me.btnIoJ13.TabIndex = 4
-        Me.btnIoJ13.Text = "3"
-        Me.btnIoJ13.UseVisualStyleBackColor = False
+        Me.BtnIoJ13.BackColor = System.Drawing.Color.Red
+        Me.BtnIoJ13.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnIoJ13.Location = New System.Drawing.Point(110, 63)
+        Me.BtnIoJ13.Name = "BtnIoJ13"
+        Me.BtnIoJ13.Size = New System.Drawing.Size(30, 30)
+        Me.BtnIoJ13.TabIndex = 4
+        Me.BtnIoJ13.Text = "3"
+        Me.BtnIoJ13.UseVisualStyleBackColor = False
         '
-        'btnIoJ12
+        'BtnIoJ12
         '
-        Me.btnIoJ12.BackColor = System.Drawing.Color.Red
-        Me.btnIoJ12.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnIoJ12.Location = New System.Drawing.Point(74, 63)
-        Me.btnIoJ12.Name = "btnIoJ12"
-        Me.btnIoJ12.Size = New System.Drawing.Size(30, 30)
-        Me.btnIoJ12.TabIndex = 3
-        Me.btnIoJ12.Text = "2"
-        Me.btnIoJ12.UseVisualStyleBackColor = False
+        Me.BtnIoJ12.BackColor = System.Drawing.Color.Red
+        Me.BtnIoJ12.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnIoJ12.Location = New System.Drawing.Point(74, 63)
+        Me.BtnIoJ12.Name = "BtnIoJ12"
+        Me.BtnIoJ12.Size = New System.Drawing.Size(30, 30)
+        Me.BtnIoJ12.TabIndex = 3
+        Me.BtnIoJ12.Text = "2"
+        Me.BtnIoJ12.UseVisualStyleBackColor = False
         '
-        'btnIoJ11
+        'BtnIoJ11
         '
-        Me.btnIoJ11.BackColor = System.Drawing.Color.Red
-        Me.btnIoJ11.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnIoJ11.Location = New System.Drawing.Point(38, 63)
-        Me.btnIoJ11.Name = "btnIoJ11"
-        Me.btnIoJ11.Size = New System.Drawing.Size(30, 30)
-        Me.btnIoJ11.TabIndex = 2
-        Me.btnIoJ11.Text = "1"
-        Me.btnIoJ11.UseVisualStyleBackColor = False
+        Me.BtnIoJ11.BackColor = System.Drawing.Color.Red
+        Me.BtnIoJ11.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnIoJ11.Location = New System.Drawing.Point(38, 63)
+        Me.BtnIoJ11.Name = "BtnIoJ11"
+        Me.BtnIoJ11.Size = New System.Drawing.Size(30, 30)
+        Me.BtnIoJ11.TabIndex = 2
+        Me.BtnIoJ11.Text = "1"
+        Me.BtnIoJ11.UseVisualStyleBackColor = False
         '
-        'btnIoJ10
+        'BtnIoJ10
         '
-        Me.btnIoJ10.BackColor = System.Drawing.Color.Red
-        Me.btnIoJ10.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnIoJ10.Location = New System.Drawing.Point(2, 63)
-        Me.btnIoJ10.Name = "btnIoJ10"
-        Me.btnIoJ10.Size = New System.Drawing.Size(30, 30)
-        Me.btnIoJ10.TabIndex = 1
-        Me.btnIoJ10.Text = "0"
-        Me.btnIoJ10.UseVisualStyleBackColor = False
+        Me.BtnIoJ10.BackColor = System.Drawing.Color.Red
+        Me.BtnIoJ10.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnIoJ10.Location = New System.Drawing.Point(2, 63)
+        Me.BtnIoJ10.Name = "BtnIoJ10"
+        Me.BtnIoJ10.Size = New System.Drawing.Size(30, 30)
+        Me.BtnIoJ10.TabIndex = 1
+        Me.BtnIoJ10.Text = "0"
+        Me.BtnIoJ10.UseVisualStyleBackColor = False
         '
-        'pnlStting
+        'PnlStting
         '
-        Me.pnlStting.BackColor = System.Drawing.SystemColors.Control
-        Me.pnlStting.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pnlStting.Controls.Add(Me.lblPullUp)
-        Me.pnlStting.Controls.Add(Me.chkPullUpStop)
-        Me.pnlStting.Controls.Add(Me.btnSetting)
-        Me.pnlStting.Controls.Add(Me.lblStInJ1)
-        Me.pnlStting.Controls.Add(Me.lblStInJ2)
-        Me.pnlStting.Controls.Add(Me.Label19)
-        Me.pnlStting.Controls.Add(Me.Label20)
-        Me.pnlStting.Controls.Add(Me.Label21)
-        Me.pnlStting.Controls.Add(Me.Label22)
-        Me.pnlStting.Controls.Add(Me.btnStInJ23)
-        Me.pnlStting.Controls.Add(Me.btnStInJ22)
-        Me.pnlStting.Controls.Add(Me.btnStInJ21)
-        Me.pnlStting.Controls.Add(Me.btnStInJ20)
-        Me.pnlStting.Controls.Add(Me.btnStInJ17)
-        Me.pnlStting.Controls.Add(Me.btnStInJ16)
-        Me.pnlStting.Controls.Add(Me.btnStInJ15)
-        Me.pnlStting.Controls.Add(Me.btnStInJ14)
-        Me.pnlStting.Controls.Add(Me.btnStInJ13)
-        Me.pnlStting.Controls.Add(Me.btnStInJ12)
-        Me.pnlStting.Controls.Add(Me.btnStInJ11)
-        Me.pnlStting.Controls.Add(Me.btnStInJ10)
-        Me.pnlStting.ForeColor = System.Drawing.Color.Black
-        Me.pnlStting.Location = New System.Drawing.Point(12, 36)
-        Me.pnlStting.Name = "pnlStting"
-        Me.pnlStting.Size = New System.Drawing.Size(290, 109)
-        Me.pnlStting.TabIndex = 37
+        Me.PnlStting.BackColor = System.Drawing.SystemColors.Control
+        Me.PnlStting.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PnlStting.Controls.Add(Me.LblPullUp)
+        Me.PnlStting.Controls.Add(Me.ChkPullUpStop)
+        Me.PnlStting.Controls.Add(Me.BtnSetting)
+        Me.PnlStting.Controls.Add(Me.LblStInJ1)
+        Me.PnlStting.Controls.Add(Me.LblStInJ2)
+        Me.PnlStting.Controls.Add(Me.Label19)
+        Me.PnlStting.Controls.Add(Me.Label20)
+        Me.PnlStting.Controls.Add(Me.Label21)
+        Me.PnlStting.Controls.Add(Me.Label22)
+        Me.PnlStting.Controls.Add(Me.BtnStInJ23)
+        Me.PnlStting.Controls.Add(Me.BtnStInJ22)
+        Me.PnlStting.Controls.Add(Me.BtnStInJ21)
+        Me.PnlStting.Controls.Add(Me.BtnStInJ20)
+        Me.PnlStting.Controls.Add(Me.BtnStInJ17)
+        Me.PnlStting.Controls.Add(Me.BtnStInJ16)
+        Me.PnlStting.Controls.Add(Me.BtnStInJ15)
+        Me.PnlStting.Controls.Add(Me.BtnStInJ14)
+        Me.PnlStting.Controls.Add(Me.BtnStInJ13)
+        Me.PnlStting.Controls.Add(Me.BtnStInJ12)
+        Me.PnlStting.Controls.Add(Me.BtnStInJ11)
+        Me.PnlStting.Controls.Add(Me.BtnStInJ10)
+        Me.PnlStting.ForeColor = System.Drawing.Color.Black
+        Me.PnlStting.Location = New System.Drawing.Point(12, 36)
+        Me.PnlStting.Name = "PnlStting"
+        Me.PnlStting.Size = New System.Drawing.Size(290, 109)
+        Me.PnlStting.TabIndex = 37
         '
-        'lblPullUp
+        'LblPullUp
         '
-        Me.lblPullUp.AutoSize = True
-        Me.lblPullUp.Font = New System.Drawing.Font("ＭＳ Ｐ明朝", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblPullUp.Location = New System.Drawing.Point(240, 21)
-        Me.lblPullUp.Name = "lblPullUp"
-        Me.lblPullUp.Size = New System.Drawing.Size(43, 26)
-        Me.lblPullUp.TabIndex = 45
-        Me.lblPullUp.Text = "PullUp" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "無効"
+        Me.LblPullUp.AutoSize = True
+        Me.LblPullUp.Font = New System.Drawing.Font("ＭＳ Ｐ明朝", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.LblPullUp.Location = New System.Drawing.Point(240, 21)
+        Me.LblPullUp.Name = "LblPullUp"
+        Me.LblPullUp.Size = New System.Drawing.Size(43, 26)
+        Me.LblPullUp.TabIndex = 45
+        Me.LblPullUp.Text = "PullUp" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "無効"
         '
-        'chkPullUpStop
+        'ChkPullUpStop
         '
-        Me.chkPullUpStop.AutoSize = True
-        Me.chkPullUpStop.Location = New System.Drawing.Point(226, 29)
-        Me.chkPullUpStop.Name = "chkPullUpStop"
-        Me.chkPullUpStop.Size = New System.Drawing.Size(15, 14)
-        Me.chkPullUpStop.TabIndex = 44
-        Me.chkPullUpStop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.chkPullUpStop.UseVisualStyleBackColor = True
+        Me.ChkPullUpStop.AutoSize = True
+        Me.ChkPullUpStop.Location = New System.Drawing.Point(226, 29)
+        Me.ChkPullUpStop.Name = "ChkPullUpStop"
+        Me.ChkPullUpStop.Size = New System.Drawing.Size(15, 14)
+        Me.ChkPullUpStop.TabIndex = 44
+        Me.ChkPullUpStop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.ChkPullUpStop.UseVisualStyleBackColor = True
         '
-        'btnSetting
+        'BtnSetting
         '
-        Me.btnSetting.Location = New System.Drawing.Point(243, 56)
-        Me.btnSetting.Name = "btnSetting"
-        Me.btnSetting.Size = New System.Drawing.Size(39, 44)
-        Me.btnSetting.TabIndex = 38
-        Me.btnSetting.Text = "設定変更"
-        Me.btnSetting.UseVisualStyleBackColor = True
+        Me.BtnSetting.Location = New System.Drawing.Point(243, 56)
+        Me.BtnSetting.Name = "BtnSetting"
+        Me.BtnSetting.Size = New System.Drawing.Size(39, 44)
+        Me.BtnSetting.TabIndex = 38
+        Me.BtnSetting.Text = "設定変更"
+        Me.BtnSetting.UseVisualStyleBackColor = True
         '
-        'lblStInJ1
+        'LblStInJ1
         '
-        Me.lblStInJ1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblStInJ1.Font = New System.Drawing.Font("ＭＳ Ｐ明朝", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblStInJ1.Location = New System.Drawing.Point(38, 82)
-        Me.lblStInJ1.Name = "lblStInJ1"
-        Me.lblStInJ1.Size = New System.Drawing.Size(54, 21)
-        Me.lblStInJ1.TabIndex = 18
-        Me.lblStInJ1.Text = "&&h0f"
+        Me.LblStInJ1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.LblStInJ1.Font = New System.Drawing.Font("ＭＳ Ｐ明朝", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.LblStInJ1.Location = New System.Drawing.Point(38, 82)
+        Me.LblStInJ1.Name = "LblStInJ1"
+        Me.LblStInJ1.Size = New System.Drawing.Size(54, 21)
+        Me.LblStInJ1.TabIndex = 18
+        Me.LblStInJ1.Text = "&&h0f"
         '
-        'lblStInJ2
+        'LblStInJ2
         '
-        Me.lblStInJ2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblStInJ2.Font = New System.Drawing.Font("ＭＳ Ｐ明朝", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblStInJ2.Location = New System.Drawing.Point(144, 1)
-        Me.lblStInJ2.Name = "lblStInJ2"
-        Me.lblStInJ2.Size = New System.Drawing.Size(54, 21)
-        Me.lblStInJ2.TabIndex = 17
-        Me.lblStInJ2.Text = "&&h0f"
+        Me.LblStInJ2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.LblStInJ2.Font = New System.Drawing.Font("ＭＳ Ｐ明朝", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.LblStInJ2.Location = New System.Drawing.Point(144, 1)
+        Me.LblStInJ2.Name = "LblStInJ2"
+        Me.LblStInJ2.Size = New System.Drawing.Size(54, 21)
+        Me.LblStInJ2.TabIndex = 17
+        Me.LblStInJ2.Text = "&&h0f"
         '
         'Label19
         '
@@ -397,7 +398,7 @@ Partial Class Form1
         Me.Label19.Font = New System.Drawing.Font("ＭＳ Ｐ明朝", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label19.Location = New System.Drawing.Point(14, 84)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(24, 16)
+        Me.Label19.Size = New System.Drawing.Size(23, 16)
         Me.Label19.TabIndex = 16
         Me.Label19.Text = "J1"
         '
@@ -407,7 +408,7 @@ Partial Class Form1
         Me.Label20.Font = New System.Drawing.Font("ＭＳ Ｐ明朝", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label20.Location = New System.Drawing.Point(118, 2)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(24, 16)
+        Me.Label20.Size = New System.Drawing.Size(23, 16)
         Me.Label20.TabIndex = 15
         Me.Label20.Text = "J2"
         '
@@ -417,7 +418,7 @@ Partial Class Form1
         Me.Label21.Font = New System.Drawing.Font("ＭＳ Ｐ明朝", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label21.Location = New System.Drawing.Point(6, 31)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(76, 16)
+        Me.Label21.Size = New System.Drawing.Size(75, 16)
         Me.Label21.TabIndex = 14
         Me.Label21.Text = "入力設定"
         '
@@ -427,234 +428,242 @@ Partial Class Form1
         Me.Label22.Font = New System.Drawing.Font("ＭＳ Ｐ明朝", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label22.Location = New System.Drawing.Point(6, 5)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(98, 16)
+        Me.Label22.Size = New System.Drawing.Size(97, 16)
         Me.Label22.TabIndex = 13
         Me.Label22.Text = "USB-IO 2.0"
         '
-        'btnStInJ23
+        'BtnStInJ23
         '
-        Me.btnStInJ23.BackColor = System.Drawing.Color.Lime
-        Me.btnStInJ23.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnStInJ23.Location = New System.Drawing.Point(114, 24)
-        Me.btnStInJ23.Name = "btnStInJ23"
-        Me.btnStInJ23.Size = New System.Drawing.Size(22, 23)
-        Me.btnStInJ23.TabIndex = 12
-        Me.btnStInJ23.Text = "3"
-        Me.btnStInJ23.UseVisualStyleBackColor = False
+        Me.BtnStInJ23.BackColor = System.Drawing.Color.Lime
+        Me.BtnStInJ23.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnStInJ23.Location = New System.Drawing.Point(114, 24)
+        Me.BtnStInJ23.Name = "BtnStInJ23"
+        Me.BtnStInJ23.Size = New System.Drawing.Size(22, 23)
+        Me.BtnStInJ23.TabIndex = 12
+        Me.BtnStInJ23.Text = "3"
+        Me.BtnStInJ23.UseVisualStyleBackColor = False
         '
-        'btnStInJ22
+        'BtnStInJ22
         '
-        Me.btnStInJ22.BackColor = System.Drawing.Color.Lime
-        Me.btnStInJ22.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnStInJ22.Location = New System.Drawing.Point(142, 24)
-        Me.btnStInJ22.Name = "btnStInJ22"
-        Me.btnStInJ22.Size = New System.Drawing.Size(22, 23)
-        Me.btnStInJ22.TabIndex = 11
-        Me.btnStInJ22.Text = "2"
-        Me.btnStInJ22.UseVisualStyleBackColor = False
+        Me.BtnStInJ22.BackColor = System.Drawing.Color.Lime
+        Me.BtnStInJ22.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnStInJ22.Location = New System.Drawing.Point(142, 24)
+        Me.BtnStInJ22.Name = "BtnStInJ22"
+        Me.BtnStInJ22.Size = New System.Drawing.Size(22, 23)
+        Me.BtnStInJ22.TabIndex = 11
+        Me.BtnStInJ22.Text = "2"
+        Me.BtnStInJ22.UseVisualStyleBackColor = False
         '
-        'btnStInJ21
+        'BtnStInJ21
         '
-        Me.btnStInJ21.BackColor = System.Drawing.Color.Lime
-        Me.btnStInJ21.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnStInJ21.Location = New System.Drawing.Point(170, 24)
-        Me.btnStInJ21.Name = "btnStInJ21"
-        Me.btnStInJ21.Size = New System.Drawing.Size(22, 23)
-        Me.btnStInJ21.TabIndex = 10
-        Me.btnStInJ21.Text = "1"
-        Me.btnStInJ21.UseVisualStyleBackColor = False
+        Me.BtnStInJ21.BackColor = System.Drawing.Color.Lime
+        Me.BtnStInJ21.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnStInJ21.Location = New System.Drawing.Point(170, 24)
+        Me.BtnStInJ21.Name = "BtnStInJ21"
+        Me.BtnStInJ21.Size = New System.Drawing.Size(22, 23)
+        Me.BtnStInJ21.TabIndex = 10
+        Me.BtnStInJ21.Text = "1"
+        Me.BtnStInJ21.UseVisualStyleBackColor = False
         '
-        'btnStInJ20
+        'BtnStInJ20
         '
-        Me.btnStInJ20.BackColor = System.Drawing.Color.Lime
-        Me.btnStInJ20.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnStInJ20.Location = New System.Drawing.Point(198, 24)
-        Me.btnStInJ20.Name = "btnStInJ20"
-        Me.btnStInJ20.Size = New System.Drawing.Size(22, 23)
-        Me.btnStInJ20.TabIndex = 9
-        Me.btnStInJ20.Text = "0"
-        Me.btnStInJ20.UseVisualStyleBackColor = False
+        Me.BtnStInJ20.BackColor = System.Drawing.Color.Lime
+        Me.BtnStInJ20.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnStInJ20.Location = New System.Drawing.Point(198, 24)
+        Me.BtnStInJ20.Name = "BtnStInJ20"
+        Me.BtnStInJ20.Size = New System.Drawing.Size(22, 23)
+        Me.BtnStInJ20.TabIndex = 9
+        Me.BtnStInJ20.Text = "0"
+        Me.BtnStInJ20.UseVisualStyleBackColor = False
         '
-        'btnStInJ17
+        'BtnStInJ17
         '
-        Me.btnStInJ17.BackColor = System.Drawing.Color.Lime
-        Me.btnStInJ17.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnStInJ17.Location = New System.Drawing.Point(198, 56)
-        Me.btnStInJ17.Name = "btnStInJ17"
-        Me.btnStInJ17.Size = New System.Drawing.Size(22, 23)
-        Me.btnStInJ17.TabIndex = 8
-        Me.btnStInJ17.Text = "7"
-        Me.btnStInJ17.UseVisualStyleBackColor = False
+        Me.BtnStInJ17.BackColor = System.Drawing.Color.Lime
+        Me.BtnStInJ17.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnStInJ17.Location = New System.Drawing.Point(198, 56)
+        Me.BtnStInJ17.Name = "BtnStInJ17"
+        Me.BtnStInJ17.Size = New System.Drawing.Size(22, 23)
+        Me.BtnStInJ17.TabIndex = 8
+        Me.BtnStInJ17.Text = "7"
+        Me.BtnStInJ17.UseVisualStyleBackColor = False
         '
-        'btnStInJ16
+        'BtnStInJ16
         '
-        Me.btnStInJ16.BackColor = System.Drawing.Color.Lime
-        Me.btnStInJ16.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnStInJ16.Location = New System.Drawing.Point(170, 56)
-        Me.btnStInJ16.Name = "btnStInJ16"
-        Me.btnStInJ16.Size = New System.Drawing.Size(22, 23)
-        Me.btnStInJ16.TabIndex = 7
-        Me.btnStInJ16.Text = "6"
-        Me.btnStInJ16.UseVisualStyleBackColor = False
+        Me.BtnStInJ16.BackColor = System.Drawing.Color.Lime
+        Me.BtnStInJ16.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnStInJ16.Location = New System.Drawing.Point(170, 56)
+        Me.BtnStInJ16.Name = "BtnStInJ16"
+        Me.BtnStInJ16.Size = New System.Drawing.Size(22, 23)
+        Me.BtnStInJ16.TabIndex = 7
+        Me.BtnStInJ16.Text = "6"
+        Me.BtnStInJ16.UseVisualStyleBackColor = False
         '
-        'btnStInJ15
+        'BtnStInJ15
         '
-        Me.btnStInJ15.BackColor = System.Drawing.Color.Lime
-        Me.btnStInJ15.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnStInJ15.Location = New System.Drawing.Point(142, 56)
-        Me.btnStInJ15.Name = "btnStInJ15"
-        Me.btnStInJ15.Size = New System.Drawing.Size(22, 23)
-        Me.btnStInJ15.TabIndex = 6
-        Me.btnStInJ15.Text = "5"
-        Me.btnStInJ15.UseVisualStyleBackColor = False
+        Me.BtnStInJ15.BackColor = System.Drawing.Color.Lime
+        Me.BtnStInJ15.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnStInJ15.Location = New System.Drawing.Point(142, 56)
+        Me.BtnStInJ15.Name = "BtnStInJ15"
+        Me.BtnStInJ15.Size = New System.Drawing.Size(22, 23)
+        Me.BtnStInJ15.TabIndex = 6
+        Me.BtnStInJ15.Text = "5"
+        Me.BtnStInJ15.UseVisualStyleBackColor = False
         '
-        'btnStInJ14
+        'BtnStInJ14
         '
-        Me.btnStInJ14.BackColor = System.Drawing.Color.Lime
-        Me.btnStInJ14.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnStInJ14.Location = New System.Drawing.Point(114, 56)
-        Me.btnStInJ14.Name = "btnStInJ14"
-        Me.btnStInJ14.Size = New System.Drawing.Size(22, 23)
-        Me.btnStInJ14.TabIndex = 5
-        Me.btnStInJ14.Text = "4"
-        Me.btnStInJ14.UseVisualStyleBackColor = False
+        Me.BtnStInJ14.BackColor = System.Drawing.Color.Lime
+        Me.BtnStInJ14.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnStInJ14.Location = New System.Drawing.Point(114, 56)
+        Me.BtnStInJ14.Name = "BtnStInJ14"
+        Me.BtnStInJ14.Size = New System.Drawing.Size(22, 23)
+        Me.BtnStInJ14.TabIndex = 5
+        Me.BtnStInJ14.Text = "4"
+        Me.BtnStInJ14.UseVisualStyleBackColor = False
         '
-        'btnStInJ13
+        'BtnStInJ13
         '
-        Me.btnStInJ13.BackColor = System.Drawing.Color.Lime
-        Me.btnStInJ13.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnStInJ13.Location = New System.Drawing.Point(86, 56)
-        Me.btnStInJ13.Name = "btnStInJ13"
-        Me.btnStInJ13.Size = New System.Drawing.Size(22, 23)
-        Me.btnStInJ13.TabIndex = 4
-        Me.btnStInJ13.Text = "3"
-        Me.btnStInJ13.UseVisualStyleBackColor = False
+        Me.BtnStInJ13.BackColor = System.Drawing.Color.Lime
+        Me.BtnStInJ13.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnStInJ13.Location = New System.Drawing.Point(86, 56)
+        Me.BtnStInJ13.Name = "BtnStInJ13"
+        Me.BtnStInJ13.Size = New System.Drawing.Size(22, 23)
+        Me.BtnStInJ13.TabIndex = 4
+        Me.BtnStInJ13.Text = "3"
+        Me.BtnStInJ13.UseVisualStyleBackColor = False
         '
-        'btnStInJ12
+        'BtnStInJ12
         '
-        Me.btnStInJ12.BackColor = System.Drawing.Color.Lime
-        Me.btnStInJ12.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnStInJ12.Location = New System.Drawing.Point(58, 56)
-        Me.btnStInJ12.Name = "btnStInJ12"
-        Me.btnStInJ12.Size = New System.Drawing.Size(22, 23)
-        Me.btnStInJ12.TabIndex = 3
-        Me.btnStInJ12.Text = "2"
-        Me.btnStInJ12.UseVisualStyleBackColor = False
+        Me.BtnStInJ12.BackColor = System.Drawing.Color.Lime
+        Me.BtnStInJ12.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnStInJ12.Location = New System.Drawing.Point(58, 56)
+        Me.BtnStInJ12.Name = "BtnStInJ12"
+        Me.BtnStInJ12.Size = New System.Drawing.Size(22, 23)
+        Me.BtnStInJ12.TabIndex = 3
+        Me.BtnStInJ12.Text = "2"
+        Me.BtnStInJ12.UseVisualStyleBackColor = False
         '
-        'btnStInJ11
+        'BtnStInJ11
         '
-        Me.btnStInJ11.BackColor = System.Drawing.Color.Lime
-        Me.btnStInJ11.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnStInJ11.Location = New System.Drawing.Point(30, 56)
-        Me.btnStInJ11.Name = "btnStInJ11"
-        Me.btnStInJ11.Size = New System.Drawing.Size(22, 23)
-        Me.btnStInJ11.TabIndex = 2
-        Me.btnStInJ11.Text = "1"
-        Me.btnStInJ11.UseVisualStyleBackColor = False
+        Me.BtnStInJ11.BackColor = System.Drawing.Color.Lime
+        Me.BtnStInJ11.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnStInJ11.Location = New System.Drawing.Point(30, 56)
+        Me.BtnStInJ11.Name = "BtnStInJ11"
+        Me.BtnStInJ11.Size = New System.Drawing.Size(22, 23)
+        Me.BtnStInJ11.TabIndex = 2
+        Me.BtnStInJ11.Text = "1"
+        Me.BtnStInJ11.UseVisualStyleBackColor = False
         '
-        'btnStInJ10
+        'BtnStInJ10
         '
-        Me.btnStInJ10.BackColor = System.Drawing.Color.Lime
-        Me.btnStInJ10.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnStInJ10.Location = New System.Drawing.Point(2, 56)
-        Me.btnStInJ10.Name = "btnStInJ10"
-        Me.btnStInJ10.Size = New System.Drawing.Size(22, 23)
-        Me.btnStInJ10.TabIndex = 1
-        Me.btnStInJ10.Text = "0"
-        Me.btnStInJ10.UseVisualStyleBackColor = False
+        Me.BtnStInJ10.BackColor = System.Drawing.Color.Lime
+        Me.BtnStInJ10.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnStInJ10.Location = New System.Drawing.Point(2, 56)
+        Me.BtnStInJ10.Name = "BtnStInJ10"
+        Me.BtnStInJ10.Size = New System.Drawing.Size(22, 23)
+        Me.BtnStInJ10.TabIndex = 1
+        Me.BtnStInJ10.Text = "0"
+        Me.BtnStInJ10.UseVisualStyleBackColor = False
         '
-        'btnStop
+        'BtnStop
         '
-        Me.btnStop.Location = New System.Drawing.Point(88, 176)
-        Me.btnStop.Name = "btnStop"
-        Me.btnStop.Size = New System.Drawing.Size(59, 27)
-        Me.btnStop.TabIndex = 39
-        Me.btnStop.Text = "停止"
-        Me.btnStop.UseVisualStyleBackColor = True
+        Me.BtnStop.Location = New System.Drawing.Point(88, 176)
+        Me.BtnStop.Name = "BtnStop"
+        Me.BtnStop.Size = New System.Drawing.Size(59, 27)
+        Me.BtnStop.TabIndex = 39
+        Me.BtnStop.Text = "停止"
+        Me.BtnStop.UseVisualStyleBackColor = True
         '
-        'tmrSendRecv
+        'BtnKm2Net
         '
+        Me.BtnKm2Net.FlatAppearance.BorderSize = 0
+        Me.BtnKm2Net.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnKm2Net.Font = New System.Drawing.Font("Century", 11.25!, CType(((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic) _
+                Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnKm2Net.ForeColor = System.Drawing.Color.Blue
+        Me.BtnKm2Net.Location = New System.Drawing.Point(173, 1)
+        Me.BtnKm2Net.Name = "BtnKm2Net"
+        Me.BtnKm2Net.Size = New System.Drawing.Size(129, 26)
+        Me.BtnKm2Net.TabIndex = 41
+        Me.BtnKm2Net.Text = "Km2Net Inc."
+        Me.BtnKm2Net.UseVisualStyleBackColor = True
         '
-        'btnKm2Net
+        'Label1
         '
-        Me.btnKm2Net.FlatAppearance.BorderSize = 0
-        Me.btnKm2Net.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnKm2Net.Font = New System.Drawing.Font("Century", 11.25!, CType(((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic) _
-                        Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnKm2Net.ForeColor = System.Drawing.Color.Blue
-        Me.btnKm2Net.Location = New System.Drawing.Point(173, 1)
-        Me.btnKm2Net.Name = "btnKm2Net"
-        Me.btnKm2Net.Size = New System.Drawing.Size(129, 26)
-        Me.btnKm2Net.TabIndex = 41
-        Me.btnKm2Net.Text = "Km2Net Inc."
-        Me.btnKm2Net.UseVisualStyleBackColor = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(77, 10)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(44, 12)
+        Me.Label1.TabIndex = 42
+        Me.Label1.Text = "64Bit版"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(308, 340)
-        Me.Controls.Add(Me.btnKm2Net)
-        Me.Controls.Add(Me.btnStop)
-        Me.Controls.Add(Me.pnlStting)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.BtnKm2Net)
+        Me.Controls.Add(Me.BtnStop)
+        Me.Controls.Add(Me.PnlStting)
         Me.Controls.Add(Me.pnlRunning)
         Me.Controls.Add(Me.btnSendRecv)
-        Me.Controls.Add(Me.btnConnect)
+        Me.Controls.Add(Me.BtnConnect)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "USB-IO2.0(AKI) サンプル"
         Me.pnlRunning.ResumeLayout(False)
         Me.pnlRunning.PerformLayout()
-        Me.pnlStting.ResumeLayout(False)
-        Me.pnlStting.PerformLayout()
+        Me.PnlStting.ResumeLayout(False)
+        Me.PnlStting.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents btnSendRecv As System.Windows.Forms.Button
-    Friend WithEvents btnConnect As System.Windows.Forms.Button
+    Friend WithEvents BtnConnect As System.Windows.Forms.Button
     Friend WithEvents pnlRunning As System.Windows.Forms.Panel
-    Friend WithEvents btnIoJ23 As System.Windows.Forms.Button
-    Friend WithEvents btnIoJ22 As System.Windows.Forms.Button
-    Friend WithEvents btnIoJ21 As System.Windows.Forms.Button
-    Friend WithEvents btnIoJ20 As System.Windows.Forms.Button
-    Friend WithEvents btnIoJ16 As System.Windows.Forms.Button
-    Friend WithEvents btnIoJ15 As System.Windows.Forms.Button
-    Friend WithEvents btnIoJ14 As System.Windows.Forms.Button
-    Friend WithEvents btnIoJ13 As System.Windows.Forms.Button
-    Friend WithEvents btnIoJ12 As System.Windows.Forms.Button
-    Friend WithEvents btnIoJ11 As System.Windows.Forms.Button
-    Friend WithEvents btnIoJ10 As System.Windows.Forms.Button
+    Friend WithEvents BtnIoJ23 As System.Windows.Forms.Button
+    Friend WithEvents BtnIoJ22 As System.Windows.Forms.Button
+    Friend WithEvents BtnIoJ21 As System.Windows.Forms.Button
+    Friend WithEvents BtnIoJ20 As System.Windows.Forms.Button
+    Friend WithEvents BtnIoJ16 As System.Windows.Forms.Button
+    Friend WithEvents BtnIoJ15 As System.Windows.Forms.Button
+    Friend WithEvents BtnIoJ14 As System.Windows.Forms.Button
+    Friend WithEvents BtnIoJ13 As System.Windows.Forms.Button
+    Friend WithEvents BtnIoJ12 As System.Windows.Forms.Button
+    Friend WithEvents BtnIoJ11 As System.Windows.Forms.Button
+    Friend WithEvents BtnIoJ10 As System.Windows.Forms.Button
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents lblIoJ2 As System.Windows.Forms.Label
-    Friend WithEvents lblIoJ1 As System.Windows.Forms.Label
-    Friend WithEvents pnlStting As System.Windows.Forms.Panel
-    Friend WithEvents lblStInJ1 As System.Windows.Forms.Label
-    Friend WithEvents lblStInJ2 As System.Windows.Forms.Label
+    Friend WithEvents LblIoJ2 As System.Windows.Forms.Label
+    Friend WithEvents LblIoJ1 As System.Windows.Forms.Label
+    Friend WithEvents PnlStting As System.Windows.Forms.Panel
+    Friend WithEvents LblStInJ1 As System.Windows.Forms.Label
+    Friend WithEvents LblStInJ2 As System.Windows.Forms.Label
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents Label22 As System.Windows.Forms.Label
-    Friend WithEvents btnStInJ23 As System.Windows.Forms.Button
-    Friend WithEvents btnStInJ22 As System.Windows.Forms.Button
-    Friend WithEvents btnStInJ21 As System.Windows.Forms.Button
-    Friend WithEvents btnStInJ20 As System.Windows.Forms.Button
-    Friend WithEvents btnStInJ17 As System.Windows.Forms.Button
-    Friend WithEvents btnStInJ16 As System.Windows.Forms.Button
-    Friend WithEvents btnStInJ15 As System.Windows.Forms.Button
-    Friend WithEvents btnStInJ14 As System.Windows.Forms.Button
-    Friend WithEvents btnStInJ13 As System.Windows.Forms.Button
-    Friend WithEvents btnStInJ12 As System.Windows.Forms.Button
-    Friend WithEvents btnStInJ11 As System.Windows.Forms.Button
-    Friend WithEvents btnStInJ10 As System.Windows.Forms.Button
-    Friend WithEvents btnSetting As System.Windows.Forms.Button
-    Friend WithEvents btnStop As System.Windows.Forms.Button
-    Friend WithEvents btnKm2Net As System.Windows.Forms.Button
-    Friend WithEvents tmrSendRecv As System.Windows.Forms.Timer
-    Friend WithEvents btnIoJ17 As System.Windows.Forms.Button
-    Friend WithEvents lblPullUp As System.Windows.Forms.Label
-    Friend WithEvents chkPullUpStop As System.Windows.Forms.CheckBox
-
+    Friend WithEvents BtnStInJ23 As System.Windows.Forms.Button
+    Friend WithEvents BtnStInJ22 As System.Windows.Forms.Button
+    Friend WithEvents BtnStInJ21 As System.Windows.Forms.Button
+    Friend WithEvents BtnStInJ20 As System.Windows.Forms.Button
+    Friend WithEvents BtnStInJ17 As System.Windows.Forms.Button
+    Friend WithEvents BtnStInJ16 As System.Windows.Forms.Button
+    Friend WithEvents BtnStInJ15 As System.Windows.Forms.Button
+    Friend WithEvents BtnStInJ14 As System.Windows.Forms.Button
+    Friend WithEvents BtnStInJ13 As System.Windows.Forms.Button
+    Friend WithEvents BtnStInJ12 As System.Windows.Forms.Button
+    Friend WithEvents BtnStInJ11 As System.Windows.Forms.Button
+    Friend WithEvents BtnStInJ10 As System.Windows.Forms.Button
+    Friend WithEvents BtnSetting As System.Windows.Forms.Button
+    Friend WithEvents BtnStop As System.Windows.Forms.Button
+    Friend WithEvents BtnKm2Net As System.Windows.Forms.Button
+    Friend WithEvents TmrSendRecv As System.Windows.Forms.Timer
+    Friend WithEvents BtnIoJ17 As System.Windows.Forms.Button
+    Friend WithEvents LblPullUp As System.Windows.Forms.Label
+    Friend WithEvents ChkPullUpStop As System.Windows.Forms.CheckBox
+    Friend WithEvents Label1 As Label
 End Class

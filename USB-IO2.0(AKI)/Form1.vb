@@ -18,59 +18,59 @@ Public Class Form1
     Public Const MyProductID = &H120        'USB-IO2.0
     Public Const MyProductID2 = &H121       'USB-IO2.0(AKI)
 
-    <StructLayout(LayoutKind.Sequential, Pack:=1, CharSet:=CharSet.Ansi)> _
-    Public Structure GUID
-        Dim Data1 As Integer
-        Dim Data2 As Short
-        Dim Data3 As Short
+    <StructLayout(LayoutKind.Sequential, Pack:=1, CharSet:=CharSet.Ansi)>
+    Private Structure GUID
+        Dim Data1 As UInt32
+        Dim Data2 As UInt16
+        Dim Data3 As UInt16
         <MarshalAs(UnmanagedType.ByValArray, SizeConst:=8)> Dim Data4() As Byte
     End Structure
 
-    <StructLayout(LayoutKind.Sequential, pack:=1)> _
-    Public Structure HIDD_ATTRIBUTES
-        Dim Size As Integer
-        Dim VendorID As Short
-        Dim ProductID As Short
-        Dim VersionNumber As Short
+    <StructLayout(LayoutKind.Sequential, Pack:=1)>
+    Private Structure HIDD_ATTRIBUTES
+        Dim Size As UInt32
+        Dim VendorID As UInt16
+        Dim ProductID As UInt16
+        Dim VersionNumber As UInt16
     End Structure
 
-    <StructLayout(LayoutKind.Sequential, pack:=1)> _
-    Public Structure HIDP_CAPS
-        Dim Usage As Short
-        Dim UsagePage As Short
-        Dim InputReportByteLength As Short
-        Dim OutputReportByteLength As Short
-        Dim FeatureReportByteLength As Short
-        <MarshalAs(UnmanagedType.ByValArray, SizeConst:=16)> Dim Reserved() As Short
-        Dim NumberLinkCollectionNodes As Short
-        Dim NumberInputButtonCaps As Short
-        Dim NumberInputValueCaps As Short
-        Dim NumberInputDataIndices As Short
-        Dim NumberOutputButtonCaps As Short
-        Dim NumberOutputValueCaps As Short
-        Dim NumberOutputDataIndices As Short
-        Dim NumberFeatureButtonCaps As Short
-        Dim NumberFeatureValueCaps As Short
-        Dim NumberFeatureDataIndices As Short
+    <StructLayout(LayoutKind.Sequential, Pack:=1)>
+    Private Structure HIDP_CAPS
+        Dim Usage As UInt16
+        Dim UsagePage As UInt16
+        Dim InputReportByteLength As UInt16
+        Dim OutputReportByteLength As UInt16
+        Dim FeatureReportByteLength As UInt16
+        <MarshalAs(UnmanagedType.ByValArray, SizeConst:=16)> Dim Reserved() As UInt16
+        Dim NumberLinkCollectionNodes As UInt16
+        Dim NumberInputButtonCaps As UInt16
+        Dim NumberInputValueCaps As UInt16
+        Dim NumberInputDataIndices As UInt16
+        Dim NumberOutputButtonCaps As UInt16
+        Dim NumberOutputValueCaps As UInt16
+        Dim NumberOutputDataIndices As UInt16
+        Dim NumberFeatureButtonCaps As UInt16
+        Dim NumberFeatureValueCaps As UInt16
+        Dim NumberFeatureDataIndices As UInt16
     End Structure
 
-    <StructLayout(LayoutKind.Sequential, pack:=1)> _
-    Public Structure SECURITY_ATTRIBUTES
+    <StructLayout(LayoutKind.Sequential, Pack:=1)>
+    Private Structure SECURITY_ATTRIBUTES
         Dim nLength As Integer
         Dim lpSecurityDescriptor As IntPtr
         Dim bInheritHandle As Integer
     End Structure
 
     <StructLayout(LayoutKind.Sequential, Pack:=1, CharSet:=CharSet.Ansi)>
-    Public Structure SP_DEVICE_INTERFACE_DATA
-        Dim cbSize As Integer
+    Private Structure SP_DEVICE_INTERFACE_DATA
+        Dim cbSize As UInt32
         Dim InterfaceClassGuid As GUID
-        Dim Flags As Integer
+        Dim Flags As UInt32
         Dim Reserved As IntPtr
     End Structure
 
     <StructLayout(LayoutKind.Sequential, Pack:=1, CharSet:=CharSet.Ansi)>
-    Public Structure SP_DEVINFO_DATA
+    Private Structure SP_DEVINFO_DATA
         Dim cbSize As Integer
         Dim ClassGuid As GUID
         Dim DevInst As Integer
@@ -78,7 +78,7 @@ Public Class Form1
     End Structure
 
     <StructLayout(LayoutKind.Sequential, Pack:=1)>
-    Public Structure SP_DEVICE_INTERFACE_DETAIL_DATA
+    Private Structure SP_DEVICE_INTERFACE_DETAIL_DATA
         Dim cbSize As Integer
         <MarshalAs(UnmanagedType.ByValArray, SizeConst:=4)> Dim DevicePath() As Byte
     End Structure
@@ -86,146 +86,146 @@ Public Class Form1
 
 
 
-    Public Declare Function CloseHandle Lib "kernel32" (ByVal hObject As Integer) As Integer
+    Private Declare Function CloseHandle Lib "kernel32" (ByVal hObject As IntPtr) As IntPtr
 
-    Public Declare Function CreateFile _
+    Private Declare Function CreateFile _
         Lib "kernel32" _
         Alias "CreateFileA" _
-        (ByVal lpFileName As String, _
-        ByVal dwDesiredAccess As Integer, _
-        ByVal dwShareMode As Integer, _
-        ByRef lpSecurityAttributes As SECURITY_ATTRIBUTES, _
-        ByVal dwCreationDisposition As Integer, _
-        ByVal dwFlagsAndAttributes As Integer, _
+        (ByVal lpFileName As String,
+        ByVal dwDesiredAccess As Integer,
+        ByVal dwShareMode As Integer,
+        ByRef lpSecurityAttributes As SECURITY_ATTRIBUTES,
+        ByVal dwCreationDisposition As Integer,
+        ByVal dwFlagsAndAttributes As Integer,
         ByVal hTemplateFile As Integer) _
     As Integer
 
-    Public Declare Function FormatMessage _
+    Private Declare Function FormatMessage _
         Lib "kernel32" _
         Alias "FormatMessageA" _
-        (ByVal dwFlags As Integer, _
-        ByRef lpSource As Integer, _
-        ByVal dwMessageId As Integer, _
-        ByVal dwLanguageZId As Integer, _
-        ByVal lpBuffer As String, _
-        ByVal nSize As Integer, _
+        (ByVal dwFlags As Integer,
+        ByRef lpSource As Integer,
+        ByVal dwMessageId As Integer,
+        ByVal dwLanguageZId As Integer,
+        ByVal lpBuffer As String,
+        ByVal nSize As Integer,
         ByVal Arguments As Integer) _
     As Integer
 
-    Public Declare Function HidD_FreePreparsedData _
+    Private Declare Function HidD_FreePreparsedData _
         Lib "hid.dll" _
         (ByRef PreparsedData As Integer) _
     As Integer
 
-    Public Declare Function HidD_GetAttributes _
+    Private Declare Function HidD_GetAttributes _
         Lib "hid.dll" _
-        (ByVal HidDeviceObject As Integer, _
+        (ByVal HidDeviceObject As Integer,
         ByRef Attributes As HIDD_ATTRIBUTES) _
     As Integer
 
-    Public Declare Function HidD_GetHidGuid _
+    Private Declare Function HidD_GetHidGuid _
         Lib "hid.dll" _
         (ByRef HidGuid As GUID) _
     As Integer
 
-    Public Declare Function HidD_GetPreparsedData _
+    Private Declare Function HidD_GetPreparsedData _
         Lib "hid.dll" _
-        (ByVal HidDeviceObject As Integer, _
-        ByRef PreparsedData As Integer) _
-    As Integer
+        (ByVal HidDeviceObject As IntPtr,
+        ByRef PreparsedData As IntPtr) _
+    As IntPtr
 
-    Public Declare Function HidP_GetCaps _
+    Private Declare Function HidP_GetCaps _
         Lib "hid.dll" _
-        (ByVal PreparsedData As Integer, _
+        (ByVal PreparsedData As IntPtr,
         ByRef Capabilities As HIDP_CAPS) _
-    As Integer
+    As IntPtr
 
-    Public Declare Function HidP_GetValueCaps _
+    Private Declare Function HidP_GetValueCaps _
         Lib "hid.dll" _
-        (ByVal ReportType As Short, _
-        ByRef ValueCaps As Byte, _
-        ByRef ValueCapsLength As Short, _
+        (ByVal ReportType As Short,
+        ByRef ValueCaps As Byte,
+        ByRef ValueCapsLength As Short,
         ByVal PreparsedData As Integer) _
     As Integer
 
-    Public Declare Function lstrcpy _
+    Private Declare Function lstrcpy _
         Lib "kernel32" _
         Alias "lstrcpyA" _
-        (ByVal dest As String, _
+        (ByVal dest As String,
         ByVal source As Integer) _
     As String
 
-    Public Declare Function lstrlen _
+    Private Declare Function lstrlen _
         Lib "kernel32" _
         Alias "lstrlenA" _
         (ByVal source As Integer) _
     As Integer
 
-    Public Declare Function ReadFile _
+    Private Declare Function ReadFile _
         Lib "kernel32" _
-        (ByVal hFile As Integer, _
-        ByRef lpBuffer As Byte, _
-        ByVal nNumberOfBytesToRead As Integer, _
-        ByRef lpNumberOfBytesRead As Integer, _
+        (ByVal hFile As Integer,
+        ByRef lpBuffer As Byte,
+        ByVal nNumberOfBytesToRead As Integer,
+        ByRef lpNumberOfBytesRead As Integer,
         ByVal lpOverlapped As Integer) _
     As Integer
 
-    Public Declare Sub RtlMoveMemory Lib "kernel32" (ByRef Destination As Byte, ByVal Source As IntPtr, ByVal Length As Short)
+    Private Declare Sub RtlMoveMemory Lib "kernel32" (ByRef Destination As Byte, ByVal Source As IntPtr, ByVal Length As Short)
 
-    Public Declare Function SetupDiCreateDeviceInfoList _
+    Private Declare Function SetupDiCreateDeviceInfoList _
         Lib "setupapi.dll" _
-        (ByRef ClassGuid As GUID, _
+        (ByRef ClassGuid As GUID,
         ByVal hwndParent As Integer) _
     As Integer
 
-    Public Declare Function SetupDiDestroyDeviceInfoList _
+    Private Declare Function SetupDiDestroyDeviceInfoList _
         Lib "setupapi.dll" _
         (ByVal DeviceInfoSet As Integer) _
     As Integer
 
-    Public Declare Function SetupDiEnumDeviceInterfaces _
+    Private Declare Function SetupDiEnumDeviceInterfaces _
         Lib "setupapi.dll" _
-        (ByVal DeviceInfoSet As Integer, _
-        ByVal DeviceInfoData As Integer, _
-        ByRef InterfaceClassGuid As GUID, _
-        ByVal MemberIndex As Integer, _
+        (ByVal DeviceInfoSet As IntPtr,
+        ByVal DeviceInfoData As IntPtr,
+        ByRef InterfaceClassGuid As GUID,
+        ByVal MemberIndex As UInt32,
         ByRef DeviceInterfaceData As SP_DEVICE_INTERFACE_DATA) _
-    As Integer
+    As IntPtr
 
-    Public Declare Function SetupDiGetClassDevs _
+    Private Declare Function SetupDiGetClassDevs _
         Lib "setupapi.dll" _
         Alias "SetupDiGetClassDevsA" _
-        (ByRef ClassGuid As GUID, _
-        ByVal Enumerator As String, _
-        ByVal hwndParent As Integer, _
+        (ByRef ClassGuid As GUID,
+        ByVal Enumerator As String,
+        ByVal hwndParent As IntPtr,
         ByVal Flags As Integer) _
-    As Integer
+    As IntPtr
 
-    Public Declare Function SetupDiGetDeviceInterfaceDetail _
+    Private Declare Function SetupDiGetDeviceInterfaceDetail _
        Lib "setupapi.dll" _
        Alias "SetupDiGetDeviceInterfaceDetailA" _
-       (ByVal DeviceInfoSet As Integer, _
-       ByRef DeviceInterfaceData As SP_DEVICE_INTERFACE_DATA, _
-       ByVal DeviceInterfaceDetailData As Integer, _
-       ByVal DeviceInterfaceDetailDataSize As Integer, _
-       ByRef RequiredSize As Integer, _
-       ByVal DeviceInfoData As Integer) _
-    As Integer
+       (ByVal DeviceInfoSet As IntPtr,
+       ByRef DeviceInterfaceData As SP_DEVICE_INTERFACE_DATA,
+       ByVal DeviceInterfaceDetailData As IntPtr,
+       ByVal DeviceInterfaceDetailDataSize As UInt32,
+       ByRef RequiredSize As UInt32,
+       ByVal DeviceInfoData As IntPtr) _
+    As IntPtr
 
-    Public Declare Function WriteFile _
+    Private Declare Function WriteFile _
         Lib "kernel32" _
-        (ByVal hFile As Integer, _
-        ByRef lpBuffer As Byte, _
-        ByVal nNumberOfBytesToWrite As Integer, _
-        ByRef lpNumberOfBytesWritten As Integer, _
+        (ByVal hFile As Integer,
+        ByRef lpBuffer As Byte,
+        ByVal nNumberOfBytesToWrite As Integer,
+        ByRef lpNumberOfBytesWritten As Integer,
         ByVal lpOverlapped As Integer) _
     As Integer
 
-    Public Declare Function GetTickCount Lib "kernel32" () As Integer
+    Private Declare Function GetTickCount Lib "kernel32" () As Integer
 
 
-    Public HidDevice As Integer = INVALID_HANDLE_VALUE
-    Public Capabilities As HIDP_CAPS
+    Private HidDevice As Integer = INVALID_HANDLE_VALUE
+    Private Capabilities As HIDP_CAPS
 
     Dim byteStInJ1 As Byte
     Dim byteStInJ2 As Byte
@@ -240,39 +240,39 @@ Public Class Form1
     Dim btnIoJ2() As System.Windows.Forms.Button
 
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        btnStInJ1 = New System.Windows.Forms.Button() {btnStInJ10, btnStInJ11, btnStInJ12, btnStInJ13, btnStInJ14, btnStInJ15, btnStInJ16, btnStInJ17}
-        btnStInJ2 = New System.Windows.Forms.Button() {btnStInJ20, btnStInJ21, btnStInJ22, btnStInJ23}
-        btnIoJ1 = New System.Windows.Forms.Button() {btnIoJ10, btnIoJ11, btnIoJ12, btnIoJ13, btnIoJ14, btnIoJ15, btnIoJ16, btnIoJ17}
-        btnIoJ2 = New System.Windows.Forms.Button() {btnIoJ20, btnIoJ21, btnIoJ22, btnIoJ23}
+        btnStInJ1 = New System.Windows.Forms.Button() {btnStInJ10, BtnStInJ11, BtnStInJ12, BtnStInJ13, BtnStInJ14, BtnStInJ15, BtnStInJ16, BtnStInJ17}
+        btnStInJ2 = New System.Windows.Forms.Button() {btnStInJ20, BtnStInJ21, BtnStInJ22, BtnStInJ23}
+        btnIoJ1 = New System.Windows.Forms.Button() {BtnIoJ10, BtnIoJ11, BtnIoJ12, BtnIoJ13, BtnIoJ14, BtnIoJ15, BtnIoJ16, btnIoJ17}
+        btnIoJ2 = New System.Windows.Forms.Button() {btnIoJ20, BtnIoJ21, BtnIoJ22, BtnIoJ23}
 
         For i = 0 To 7
             AddHandler DirectCast(btnStInJ1(i), Button).Click, AddressOf btnStIn_Click
-            AddHandler DirectCast(btnIoJ1(i), Button).Click, AddressOf btnIO_Click
+            AddHandler DirectCast(btnIoJ1(i), Button).Click, AddressOf BtnIO_Click
         Next
         For i = 0 To 3
             AddHandler DirectCast(btnStInJ2(i), Button).Click, AddressOf btnStIn_Click
-            AddHandler DirectCast(btnIoJ2(i), Button).Click, AddressOf btnIO_Click
+            AddHandler DirectCast(btnIoJ2(i), Button).Click, AddressOf BtnIO_Click
         Next
 
         pnlStting.ForeColor = Color.Silver
         pnlRunning.ForeColor = Color.Silver
         btnSetting.Enabled = False
-        btnSendRecv.Enabled = False
+        BtnSendRecv.Enabled = False
         btnStop.Enabled = False
     End Sub
 
-    Private Sub btnKm2Net_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnKm2Net.Click
+    Private Sub BtnKm2Net_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnKm2Net.Click
         System.Diagnostics.Process.Start("http://km2net.com")
     End Sub
 
-    Private Sub btnConnect_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnConnect.Click
-        If openDevice() = True Then
+    Private Sub BtnConnect_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnConnect.Click
+        If OpenDevice() = True Then
             Dim sendData(63) As Byte
             Dim recvData(63) As Byte
 
-            btnConnect.Enabled = False
-            btnSendRecv.Enabled = True
-            btnSetting.Enabled = True
+            BtnConnect.Enabled = False
+            BtnSendRecv.Enabled = True
+            BtnSetting.Enabled = True
 
             sendData(0) = &HF8              'コマンド ：システム設定用フラッシュロム読込み
             sendData(63) = &H0              'シーケンス
@@ -292,18 +292,18 @@ Public Class Form1
             byteInJ2 = &HF
             byteOutJ1 = &HFF
             byteOutJ2 = &HF
-            pnlStting.Enabled = True
+            PnlStting.Enabled = True
             pnlRunning.Enabled = True
-            pnlStting.ForeColor = Color.Black
-            chgStInColor()
-            chgIOColor()
+            PnlStting.ForeColor = Color.Black
+            ChgStInColor()
+            ChgIoColor()
         Else
             MsgBox("デバイスが見つかりません。")
         End If
     End Sub
 
-    Private Sub btnStIn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        If btnConnect.Enabled = True Then
+    Private Sub BtnStIn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        If BtnConnect.Enabled = True Then
             Return
         End If
 
@@ -313,11 +313,11 @@ Public Class Form1
         Else
             byteStInJ2 = byteStInJ2 Xor (2 ^ Integer.Parse(strBtnName.Substring(strBtnName.Length - 1, 1)))
         End If
-        chgStInColor()
-        chgIoColor()
+        ChgStInColor()
+        ChgIoColor()
     End Sub
 
-    Private Sub btnSetting_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSetting.Click
+    Private Sub BtnSetting_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSetting.Click
         Dim sendData(63) As Byte
         Dim recvData(63) As Byte
 
@@ -339,20 +339,20 @@ Public Class Form1
         SendRecv(sendData, recvData)    '送受信
 
         MessageBox.Show("入力設定しました。" & vbCrLf & "USB-IO2.0を抜差してください")
-        closeDevice()
+        CloseDevice()
 
         tmrSendRecv.Enabled = False
-        pnlStting.ForeColor = Color.Silver
+        PnlStting.ForeColor = Color.Silver
         pnlRunning.ForeColor = Color.Silver
-        btnSetting.Enabled = False
-        btnSendRecv.Enabled = False
+        BtnSetting.Enabled = False
+        BtnSendRecv.Enabled = False
         btnStop.Enabled = False
-        btnConnect.Enabled = True
+        BtnConnect.Enabled = True
 
     End Sub
 
-    Private Sub btnIO_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        If btnConnect.Enabled = True Then
+    Private Sub BtnIO_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        If BtnConnect.Enabled = True Then
             Return
         End If
 
@@ -362,20 +362,20 @@ Public Class Form1
         Else
             byteOutJ2 = byteOutJ2 Xor (2 ^ Integer.Parse(strBtnName.Substring(strBtnName.Length - 1, 1)))
         End If
-        chgIoColor()
+        ChgIoColor()
     End Sub
 
-    Private Sub btnSendRecv_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSendRecv.Click
-        pnlStting.Enabled = False
-        btnSetting.Enabled = False
-        btnSendRecv.Enabled = False
+    Private Sub BtnSendRecv_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSendRecv.Click
+        PnlStting.Enabled = False
+        BtnSetting.Enabled = False
+        BtnSendRecv.Enabled = False
         tmrSendRecv.Enabled = True
         btnStop.Enabled = True
-        pnlStting.ForeColor = Color.Black
+        PnlStting.ForeColor = Color.Black
         pnlRunning.ForeColor = Color.Yellow
     End Sub
 
-    Private Sub tmrSendRecv_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tmrSendRecv.Tick
+    Private Sub TmrSendRecv_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tmrSendRecv.Tick
         Dim sendData(63) As Byte
         Dim recvData(63) As Byte
 
@@ -390,29 +390,29 @@ Public Class Form1
 
         byteInJ1 = recvData(1)          'Ｊ１入力値
         byteInJ2 = recvData(2)          'Ｊ２入力値
-        chgIoColor()
+        ChgIoColor()
     End Sub
 
-    Private Sub btnStop_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStop.Click
-        btnSendRecv.Enabled = True
+    Private Sub BtnStop_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStop.Click
+        BtnSendRecv.Enabled = True
         tmrSendRecv.Enabled = False
         btnStop.Enabled = False
         pnlRunning.ForeColor = Color.Silver
     End Sub
 
     Private Sub Form1_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
-        closeDevice()
+        CloseDevice()
     End Sub
 
-    Private Sub chgStInColor()
+    Private Sub ChgStInColor()
         Dim i As Integer
         For i = 0 To 7
             If byteStInJ1 And 2 ^ i Then
                 btnStInJ1(i).FlatStyle = FlatStyle.Standard
-                btnIOJ1(i).BackColor = Color.ForestGreen
+                btnIoJ1(i).BackColor = Color.ForestGreen
             Else
                 btnStInJ1(i).FlatStyle = FlatStyle.System
-                btnIOJ1(i).BackColor = Color.Red
+                btnIoJ1(i).BackColor = Color.Red
             End If
         Next
         lblStInJ1.Text = "0" & Hex$(byteStInJ1)
@@ -420,17 +420,17 @@ Public Class Form1
         For i = 0 To 3
             If byteStInJ2 And 2 ^ i Then
                 btnStInJ2(i).FlatStyle = FlatStyle.Standard
-                btnIOJ2(i).BackColor = Color.ForestGreen
+                btnIoJ2(i).BackColor = Color.ForestGreen
             Else
                 btnStInJ2(i).FlatStyle = FlatStyle.System
-                btnIOJ2(i).BackColor = Color.Red
+                btnIoJ2(i).BackColor = Color.Red
             End If
         Next
         lblStInJ2.Text = "0" & Hex$(byteStInJ2)
         lblStInJ2.Text = "&&h" & lblStInJ2.Text.Substring(lblStInJ2.Text.Length - 2, 2)
     End Sub
 
-    Private Sub chgIoColor()
+    Private Sub ChgIoColor()
         Dim i As Integer
         Dim s As String
         For i = 0 To 7
@@ -460,27 +460,27 @@ Public Class Form1
     End Sub
 
 
-    Private Function openDevice() As Boolean
-        Dim HidGuid As GUID
-        Dim DeviceInfoSet As Integer
-        Dim MyDeviceInterfaceData As SP_DEVICE_INTERFACE_DATA
+    Private Function OpenDevice() As Boolean
+        Dim HidGuid As GUID = Nothing
+        Dim DeviceInfoSet As IntPtr
+        Dim MyDeviceInterfaceData As SP_DEVICE_INTERFACE_DATA = Nothing
         Dim MemberIndex As Integer
-        Dim MyDeviceInfoData As SP_DEVINFO_DATA
-        Dim Needed As Integer
-        Dim DetailData As Integer
-        Dim MyDeviceInterfaceDetailData As SP_DEVICE_INTERFACE_DETAIL_DATA
+        Dim MyDeviceInfoData As SP_DEVINFO_DATA = Nothing
+        Dim Needed As UInt32
+        Dim DetailData As UInt32
+        Dim MyDeviceInterfaceDetailData As SP_DEVICE_INTERFACE_DETAIL_DATA = Nothing
         Dim DetailDataBuffer() As Byte
         Dim gch As GCHandle
-        Dim address As Integer
+        Dim address As IntPtr
         Dim DevicePathName As String
         Dim sa As SECURITY_ATTRIBUTES
         Dim DeviceAttributes As HIDD_ATTRIBUTES
-        Dim PreparsedData As Long
+        Dim PreparsedData As IntPtr
 
         Dim ipt As IntPtr
-        Dim Result As Integer
+        Dim Result As IntPtr
 
-        openDevice = False
+        OpenDevice = False
 
         Result = HidD_GetHidGuid(HidGuid)
         DeviceInfoSet = SetupDiGetClassDevs _
@@ -506,7 +506,7 @@ Public Class Form1
                 Call RtlMoveMemory(DetailDataBuffer(0), ipt, Marshal.SizeOf(MyDeviceInterfaceDetailData))
 
                 gch = GCHandle.Alloc(DetailDataBuffer, GCHandleType.Pinned)
-                address = gch.AddrOfPinnedObject().ToInt32()
+                address = gch.AddrOfPinnedObject()
 
                 Result = SetupDiGetDeviceInterfaceDetail _
                    (DeviceInfoSet, MyDeviceInterfaceData, address, DetailData, Needed, 0)
@@ -520,7 +520,7 @@ Public Class Form1
                 sa.lpSecurityDescriptor = 0
                 sa.bInheritHandle = 0
 
-                HidDevice = CreateFile(DevicePathName, GENERIC_READ Or GENERIC_WRITE, (FILE_SHARE_READ Or FILE_SHARE_WRITE), _
+                HidDevice = CreateFile(DevicePathName, GENERIC_READ Or GENERIC_WRITE, (FILE_SHARE_READ Or FILE_SHARE_WRITE),
                                         sa, OPEN_EXISTING, 0, 0)
 
                 If HidDevice <> INVALID_HANDLE_VALUE Then
@@ -533,7 +533,7 @@ Public Class Form1
                         HidD_GetPreparsedData(HidDevice, PreparsedData)
                         HidP_GetCaps(PreparsedData, Capabilities)
 
-                        openDevice = True
+                        OpenDevice = True
                         Exit Do
                     Else
                         Result = CloseHandle(HidDevice)
@@ -543,12 +543,12 @@ Public Class Form1
             Else
                 Exit Do
             End If
-            MemberIndex = MemberIndex + 1
+            MemberIndex += 1
         Loop
 
     End Function
 
-    Private Sub closeDevice()
+    Private Sub CloseDevice()
         If HidDevice <> INVALID_HANDLE_VALUE Then
             CloseHandle(HidDevice)
         End If
