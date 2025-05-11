@@ -1,35 +1,35 @@
-# Km2Net USBIO2.0 ����T���v��
+# Km2Net USBIO2.0 制御サンプル
 
-���̃��|�W�g���́A**USBIO2.0** ����� **USBIO2.0(AKI)** �̐�����s�����߂̃T���v���\�t�g�E�F�A�ł��B
+このリポジトリは、**USBIO2.0** および **USBIO2.0(AKI)** の制御を行うためのサンプルソフトウェアです。
 
-## �T�v
+## 概要
 
-Km2Net USBIO2.0 �́AUSB �o�R�� GPIO �𐧌�ł���f�o�C�X�ł��B
+Km2Net USBIO2.0 は、USB 経由で GPIO を制御できるデバイスです。
 
 
-## ����
+## 特徴
 
-- USBIO2.0 �� �e�s���̓��́^�o�͂̐ݒ�
-- USBIO2.0 �� �o�̓s���̃I���^�I�t����
-- USBIO2.0 �� ���̓s���̃I���^�I�t�ǂݎ��i�|�[�g���Ɓj
+- USBIO2.0 の 各ピンの入力／出力の設定
+- USBIO2.0 の 出力ピンのオン／オフ制御
+- USBIO2.0 の 入力ピンのオン／オフ読み取り（ポートごと）
 
-## �����
+## 動作環境
 
 - OS: Windows 11 64Bit (x64)
-- �h���C�o�s�v �iWindows�W��HID�h���C�o�𗘗p�j
+- ドライバ不要 （Windows標準HIDドライバを利用）
 - Visualstudio2022
-- .Net Framework 4.8.1 ���p
+- .Net Framework 4.8.1 利用
 
-## �r���h���@
+## ビルド方法
 
-�{�\�t�g�E�F�A�� 64bit ��p�ł��B�v���b�g�t�H�[�����ux64�v�ɐݒ肵�ăR���p�C�����Ă��������B
+本ソフトウェアは 64bit 専用です。プラットフォームを「x64」に設定してコンパイルしてください。
 
-32bit �ł��K�v�ȏꍇ�́A�����̃R�~�b�g�������p���������B
+32bit 版が必要な場合は、初期のコミットをご利用ください。
 
-## �g����
+## 使い方
 
-1. USB-IO2.0 ��ڑ����A�A�v���P�[�V�������N�����܂��B
-2. �u�ڑ��v�{�^�����N���b�N���ăf�o�C�X�Ɛڑ����܂��B
-3. �ݒ��ύX����ꍇ�́A���̓s�����N���b�N���ē��͂ɐݒ肵�Ă��������B  
-   �i�����̓s���Ƃ��Đݒ肳��Ă��Ȃ��s���́A�o�̓s���ƂȂ�܂��j
-4. �u����M�v�{�^���������ƁA�^�C�}�[�Ŏw�肵���Ԋu�œ��o�͏��������s����A�s���̏�Ԃ����A���^�C���ŕ\������܂��B
+1. USB-IO2.0 を接続し、アプリケーションを起動します。
+2. 「接続」ボタンをクリックしてデバイスと接続します。
+3. 設定を変更する場合は、入力ピンをクリックして入力に設定してください。  
+   （※入力ピンとして設定されていないピンは、出力ピンとなります）
+4. 「送受信」ボタンを押すと、タイマーで指定した間隔で入出力処理が実行され、ピンの状態がリアルタイムで表示されます。
