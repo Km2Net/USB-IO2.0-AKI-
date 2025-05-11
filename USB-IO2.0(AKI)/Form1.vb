@@ -57,30 +57,30 @@ Public Class Form1
     <StructLayout(LayoutKind.Sequential, pack:=1)> _
     Public Structure SECURITY_ATTRIBUTES
         Dim nLength As Integer
-        Dim lpSecurityDescriptor As Integer
+        Dim lpSecurityDescriptor As IntPtr
         Dim bInheritHandle As Integer
     End Structure
 
-    <StructLayout(LayoutKind.Sequential, Pack:=1, CharSet:=CharSet.Ansi)> _
+    <StructLayout(LayoutKind.Sequential, Pack:=1, CharSet:=CharSet.Ansi)>
     Public Structure SP_DEVICE_INTERFACE_DATA
         Dim cbSize As Integer
         Dim InterfaceClassGuid As GUID
         Dim Flags As Integer
-        Dim Reserved As Integer
+        Dim Reserved As IntPtr
     End Structure
 
-    <StructLayout(LayoutKind.Sequential, Pack:=1, CharSet:=CharSet.Ansi)> _
+    <StructLayout(LayoutKind.Sequential, Pack:=1, CharSet:=CharSet.Ansi)>
     Public Structure SP_DEVINFO_DATA
         Dim cbSize As Integer
         Dim ClassGuid As GUID
         Dim DevInst As Integer
-        Dim Reserved As Integer
+        Dim Reserved As IntPtr
     End Structure
 
-    <StructLayout(LayoutKind.Sequential, pack:=1)> _
+    <StructLayout(LayoutKind.Sequential, Pack:=1)>
     Public Structure SP_DEVICE_INTERFACE_DETAIL_DATA
         Dim cbSize As Integer
-        Dim DevicePath As Byte
+        <MarshalAs(UnmanagedType.ByValArray, SizeConst:=4)> Dim DevicePath() As Byte
     End Structure
 
 
@@ -503,7 +503,7 @@ Public Class Form1
                 ReDim DetailDataBuffer(Needed)
                 ipt = Marshal.AllocHGlobal(Marshal.SizeOf(MyDeviceInterfaceDetailData))
                 Marshal.StructureToPtr(MyDeviceInterfaceDetailData, ipt, False)
-                Call RtlMoveMemory(DetailDataBuffer(0), ipt, 4)
+                Call RtlMoveMemory(DetailDataBuffer(0), ipt, Marshal.SizeOf(MyDeviceInterfaceDetailData))
 
                 gch = GCHandle.Alloc(DetailDataBuffer, GCHandleType.Pinned)
                 address = gch.AddrOfPinnedObject().ToInt32()
@@ -513,7 +513,7 @@ Public Class Form1
 
                 gch.Free()
 
-                DevicePathName = System.Text.Encoding.GetEncoding("Shift-JIS").GetString(DetailDataBuffer)
+                DevicePathName = System.Text.Encoding.ASCII.GetString(DetailDataBuffer)
                 DevicePathName = DevicePathName.Substring(4)
 
                 sa.nLength = 12
